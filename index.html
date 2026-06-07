@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="#" />
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+             crossorigin=""></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/2.1.0/gpx.min.js"></script>
+
+        <script src="https://cdn.plot.ly/plotly-3.1.0.min.js" charset="utf-8"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title>Orga Ecrins</title>
+    </head>
+    
+    <body>
+         <div id="map"></div>
+         <div id="gpx_selector">
+            <label for="gpx_selection">Choose GPX:</label>
+            <!-- <select name="gpx_selection" id="gpx_selection" onchange='alert("gogo")'> -->
+            <select name="gpx_selection" id="gpx_selection">
+                <option value="./gpx/gr54-argentiere-oisans.gpx">Argentiere &rarr; Oisans</option>
+            </select>
+         </div>
+         <div id="plot"></div>
+         <div id="gpx_summary">
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>From</th>
+            <th>To</th>
+            <th>N Points</th>
+            <th>Distance (km)</th>
+            <th>Elevation + (m)</th>
+            <th>Elevation - (m)</th>
+            <th>Distance effort (km)</th>
+            <th>Duration</th>
+        </tr>
+    </thead>
+    <tbody>
+			<tr>
+				<td>1</td>
+				<td>Entre-les-Aygues - Pré de la Chaumette</td>
+				<td></td>
+				<td>2192</td>
+				<td>16</td>
+				<td>1150</td>
+				<td>-961</td>
+				<td>31</td>
+				<td>6h52</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Pré de la Chaumette - Refuge Chabournéou</td>
+				<td></td>
+				<td>2219</td>
+				<td>15</td>
+				<td>1243</td>
+				<td>-1028</td>
+				<td>31</td>
+				<td>6h55</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Refuge Chabournéou - Refuge de l'Olan</td>
+				<td></td>
+				<td>2593</td>
+				<td>19</td>
+				<td>1293</td>
+				<td>-998</td>
+				<td>36</td>
+				<td>7h53</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Refuge de l'Olan - Refuge des Souffles</td>
+				<td></td>
+				<td>1290</td>
+				<td>9</td>
+				<td>603</td>
+				<td>-956</td>
+				<td>18</td>
+				<td>4h3</td>
+			</tr></tr>
+			<tr>
+				<td>5</td>
+				<td>Des Souffles - Désert en Valjouffrey</td>
+				<td></td>
+				<td>1403</td>
+				<td>11</td>
+				<td>625</td>
+				<td>-1333</td>
+				<td>22</td>
+				<td>4h49</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Désert en Valjouffrey - col de Côte Belle - Valsenestre</td>
+				<td></td>
+				<td>909</td>
+				<td>11</td>
+				<td>1009</td>
+				<td>-988</td>
+				<td>25</td>
+				<td>5h31</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Valsenetre - lac de la Muzelle</td>
+				<td></td>
+				<td>594</td>
+				<td>9</td>
+				<td>1282</td>
+				<td>-479</td>
+				<td>23</td>
+				<td>5h12</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Lac Muzelle - Bourg d'Oisans</td>
+				<td></td>
+				<td>1467</td>
+				<td>19</td>
+				<td>490</td>
+				<td>-1872</td>
+				<td>31</td>
+				<td>6h46</td>
+			</tr>
+        </tbody>
+		<tfoot><tr>
+			<td>TOTAL</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>121</td>
+			<td>8654</td>
+			<td>-8714</td>
+			<td>236</td>
+			<td></td>
+		</tr></tfoot>
+</table>
+
+         </div>
+
+         <div id="transport">
+             <h2>Transport</h2>
+             <h3>Argentière &rarr; Vallouise</h3>
+             <p>
+                <img src="imgs/paysecrins2.jpg" alt="horaire navette Vallouise vers Entre les Aygues (page 2)">
+             </p>
+             <p>
+                <img src="imgs/paysecrins1.jpg" alt="horaire navette Vallouise vers Entre les Aygues (page 1)">
+             </p>
+             <h3>Vallouise &rarr; Entre les Aygues</h3>
+             <p>
+                <img src="imgs/estibus-entre-aygues.jpg" alt="horaire navette Argentière vers Vallouise">
+             </p>
+
+         </div>
+        
+    </body>
+    
+    <script type="text/javascript" src="map.js"></script>
+</html>
